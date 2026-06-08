@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <help_text>title:System Zarządzania Menażerią Chomików
+Start
+Zalogowanie do systemu
+Wybór parametrów leasingu\n(rasa, płeć, waga, maść)
+Weryfikacja historii chorób
+Odbiór i analiza wniosku
+Generowanie protokołu\nleczenia (weterynarz)
+If
+	[Czy reklamacja uzasadniona?]
+	Wpis w Harmonogram Czynności
+	Przygotowanie chomika\n(sprzątanie klatek)
+	Weryfikacja danych\noperacyjnych
+	Zgłoszenie na wystawę
+	Grafik karmienia\n(weterynarz)
+	Wniosek o leasing\n(Zwrot kosztów)
+	End
+
+	[Odrzucenie wniosku]
+	Generowanie powiadomienia\no odmowie
+	Wniosek o leasing\n(Odrzucony)
+	End
+</help_text>
+  <zoom_level>13</zoom_level>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>299</x>
+      <y>0</y>
+      <w>429</w>
+      <h>1352</h>
+    </coordinates>
+    <panel_attributes>Klient Zalogowany
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>728</x>
+      <y>0</y>
+      <w>403</w>
+      <h>1352</h>
+    </coordinates>
+    <panel_attributes>System
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>507</x>
+      <y>52</y>
+      <w>26</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>507</x>
+      <y>52</y>
+      <w>39</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>403</x>
+      <y>143</y>
+      <w>234</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Zalogowanie do systemu</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>507</x>
+      <y>182</y>
+      <w>39</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>403</x>
+      <y>273</y>
+      <w>234</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Przeglądanie chomików</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>507</x>
+      <y>312</y>
+      <w>39</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>442</x>
+      <y>403</y>
+      <w>156</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Wybór chomika</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>429</x>
+      <y>507</y>
+      <w>208</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>bg=green
+Czy są dostępne
+wolne chomiki?</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>507</x>
+      <y>442</y>
+      <w>39</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>325</x>
+      <y>637</y>
+      <w>130</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Przejście do 
+formularza</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>377</x>
+      <y>676</y>
+      <w>39</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>312</x>
+      <y>741</y>
+      <w>208</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Wypełnienie formularza
+leasingowego</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>793</x>
+      <y>533</y>
+      <w>247</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Wyświetlenie komunikatu o
+braku chomików</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>923</x>
+      <y>572</y>
+      <w>39</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>819</x>
+      <y>728</y>
+      <w>247</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Odbiór i weryfikacja
+danych formularza</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>858</x>
+      <y>806</y>
+      <w>169</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>bg=green
+Czy dane
+są poprawne?</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>923</x>
+      <y>767</y>
+      <w>39</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>507</x>
+      <y>741</y>
+      <w>338</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>533</y>
+      <w>195</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Nie
+lt=&lt;-</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>377</x>
+      <y>546</y>
+      <w>78</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Tak
+lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>767</x>
+      <y>845</y>
+      <w>130</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Tak
+lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1014</x>
+      <y>845</y>
+      <w>65</w>
+      <h>195</h>
+    </coordinates>
+    <panel_attributes>Nie
+lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>728</x>
+      <y>975</y>
+      <w>130</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Zapis wniosku
+w bazie</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>923</x>
+      <y>1014</y>
+      <w>208</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Wyświetlanie komunikatu
+o błędzie</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>1014</y>
+      <w>39</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>728</x>
+      <y>1092</y>
+      <w>208</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Zmiana statusu
+chomika</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>403</x>
+      <y>1300</y>
+      <w>26</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>1131</y>
+      <w>390</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;280.0;40.0;280.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>351</x>
+      <y>1157</y>
+      <w>130</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Potwierdzenie
+leasingu</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>403</x>
+      <y>1196</y>
+      <w>39</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>572</x>
+      <y>1222</y>
+      <w>130</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Poprawa
+formularza</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>689</x>
+      <y>1053</y>
+      <w>377</w>
+      <h>221</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;270.0;150.0;270.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>988</y>
+      <w>234</w>
+      <h>286</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0;10.0;200.0;40.0;200.0</additional_attributes>
+  </element>
+</diagram>
