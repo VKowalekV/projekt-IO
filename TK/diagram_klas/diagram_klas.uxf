@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>522</x>
+      <y>0</y>
+      <w>144</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;AbstractClass&gt;&gt;
+UzytkownikA
+--
+- id: Long
+- email: String
+- haslo: String
+--
++ zaloguj(): boolean
++ wyloguj(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>171</x>
+      <y>162</y>
+      <w>405</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Klient
+--
+- imie: String
+- nazwisko: String
+- adres: Adres
+- wnioski: List&lt;WniosekLeasingowy&gt;
+--
++ zlozWniosekLeasingowy(c: Chomik, od: Date, do: Date): void
++ anulujRezerwacje(idWniosku: int): void
++ zglosReklamacje(idWniosku: int, powod: String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>864</x>
+      <y>0</y>
+      <w>126</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;AbstractClass&gt;&gt;
+PracownikA
+--
+- imie: String
+- nazwisko: String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>315</y>
+      <w>153</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Adres
+--
+- ulica: String
+- numerDomu: String
+- miasto: String
+- wojewodztwo: String
+- kodPocztowy: String
+- kraj: String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>198</x>
+      <y>396</y>
+      <w>261</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+WniosekLeasingowy
+--
+- id: int
+- dataZlozenia: Date
+- dataRozpoczecia: Date
+- dataZakonczenia: Date
+- status: String
+- koszt: float
+- klient: Klient
+- chomik: Chomik
+- reklamacja: Reklamacja
+--
++ zmienStatus(nowyStatus: String): void
++ obliczKoszt(): float</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>621</x>
+      <y>162</y>
+      <w>405</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Administrator
+--
+
+--
++ dodajChomika(dane: String): void
++ usunChomika(id: int): void
++ edytujChomika(id: int, dane: String): void 
++ zarzadzajLeasingiem(): void
++ zglosNaWystawe(c: Chomik, w: Wystawa): void
++ rejestrujRozmnazanie(samiec: Chomik, samica: Chomik): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>702</y>
+      <w>216</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Reklamacja
+--
+- id: int
+- dataZgloszenia: Date
+- powod: String
+- decyzja: String
+- kwotaZwrotu: float
+- wniosek: WniosekLeasingowy
+--
++ rozpatrz(decyzja: String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>639</x>
+      <y>387</y>
+      <w>162</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+ProtokolRozmnazania
+--
+- id: int
+- dataKojarzenia: Date
+- liczbaUrodzonych: int
+- samiec: Chomik
+- samica: Chomik
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>864</x>
+      <y>387</y>
+      <w>144</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+ZgloszenieWystawowe
+--
+- id: int
+- zajeteMiejsce: int
+- chomik: Chomik
+- wystawa: wystawa
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1287</x>
+      <y>162</y>
+      <w>324</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Weterynarz
+--
+
+--
++ utworzHarmonogramCzynnosci(c: Chomik): void
++ wystawProtokolLeczenia(c: Chomik): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1062</x>
+      <y>162</y>
+      <w>171</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+PracownikAnalityczny
+--
+
+--
++ generujRaport): Raport</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1665</x>
+      <y>162</y>
+      <w>342</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Pracownik
+--
+
+--
++ odnotujCzynnosc(h: HarmonogramCzynnosci): void
++ sprawdzHarmonogram(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>873</x>
+      <y>585</y>
+      <w>144</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Wystawa
+--
+- id: int
+- nazwa: String
+- dataWystawy: Date
+- miejsce: String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1062</x>
+      <y>387</y>
+      <w>189</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Raport
+--
+- id: int
+- typRaportu: String
+- dataWygenerowania: Date
+- zawartosc: String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1377</x>
+      <y>387</y>
+      <w>180</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+HarmonogramCzynnosci
+--
+- id: int
+- typCzynnosci: String
+-planowanaData: Date
+- zrealizowano: boolean
+-chomik: Chomik
+- pracownik: Pracownik
+- weterynarz: Weterynarz
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>693</y>
+      <w>342</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Chomik
+--
+- id: int
+- imie: String
+- rasa: String
+- plec: String
+- waga: float
+- masc: String
+- statusDostepnosci: String
+- historiaChorob: List&lt;ProtokolMedyczny&gt;
+--
++ sprawdzHistorieChorob(): List&lt;ProtokolMedyczny&gt;
++ zmienStatus(nowyStatus: String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1638</x>
+      <y>387</y>
+      <w>342</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+RealizacjaCzynnosci
+--
+- id: int
+- dataWykonania: Date
+- godzinaWykonania: String
+- pracownik: Pracownik
+- harmonogramCzynnosci: HarmonogramCzynnosci
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1116</x>
+      <y>585</y>
+      <w>171</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+ProtokolMedyczny
+--
+- id: int
+- dataWystawienia: Date
+- diagnoza: String
+- opisLeczenia: String
+- chomik: Chomik
+- weterynarz: Weterynarz
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>333</x>
+      <y>45</y>
+      <w>207</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>72</x>
+      <y>225</y>
+      <w>117</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>324</x>
+      <y>306</y>
+      <w>45</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>594</y>
+      <w>54</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>657</x>
+      <y>36</y>
+      <w>225</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>594</y>
+      <w>99</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0;90.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>504</y>
+      <w>45</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>711</x>
+      <y>504</y>
+      <w>45</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>702</x>
+      <y>306</y>
+      <w>45</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>54</y>
+      <w>126</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>981</x>
+      <y>54</y>
+      <w>171</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0;170.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>981</x>
+      <y>36</y>
+      <w>468</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;500.0;10.0;500.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>981</x>
+      <y>18</y>
+      <w>873</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;950.0;10.0;950.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>909</x>
+      <y>306</y>
+      <w>45</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>801</x>
+      <y>459</y>
+      <w>81</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+</panel_attributes>
+    <additional_attributes>70.0;10.0;50.0;10.0;50.0;310.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>936</x>
+      <y>495</y>
+      <w>45</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1125</x>
+      <y>234</y>
+      <w>45</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>801</x>
+      <y>630</y>
+      <w>333</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..•</panel_attributes>
+    <additional_attributes>10.0;150.0;280.0;150.0;280.0;10.0;350.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1278</x>
+      <y>243</y>
+      <w>81</w>
+      <h>414</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>60.0;10.0;60.0;430.0;10.0;430.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>801</x>
+      <y>540</y>
+      <w>639</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;290.0;670.0;290.0;670.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1431</x>
+      <y>243</y>
+      <w>45</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1503</x>
+      <y>243</y>
+      <w>252</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>250.0;10.0;250.0;60.0;10.0;60.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1800</x>
+      <y>243</y>
+      <w>45</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1548</x>
+      <y>450</y>
+      <w>108</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+</diagram>
