@@ -12,7 +12,7 @@
     <panel_attributes>&lt;&lt;AbstractClass&gt;&gt;
 UzytkownikA
 --
-- id: Long
+- id: int
 - email: String
 - haslo: String
 --
@@ -182,7 +182,7 @@ ZgloszenieWystawowe
 - id: int
 - zajeteMiejsce: int
 - chomik: Chomik
-- wystawa: wystawa
+- wystawa: Wystawa
 --
 </panel_attributes>
     <additional_attributes/>
@@ -217,7 +217,7 @@ PracownikAnalityczny
 --
 
 --
-+ generujRaport): Raport</panel_attributes>
++ generujRaport(): Raport</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
